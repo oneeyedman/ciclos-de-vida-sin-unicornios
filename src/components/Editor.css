@@ -1,0 +1,6 @@
+.form__field--textarea {
+  width: 80%;
+  font: inherit;
+  font-size: 20px;
+  height: 100px;
+}
