@@ -17,11 +17,9 @@ class App extends Component {
   }
 
 
-  saveText() {
-    const textarea = document.querySelector('.form__field--textarea');
-    const mitexto = textarea.value;
+  saveText(text) {
     this.setState({
-      mieditor: mitexto
+      mieditor: text
     })
   }
 

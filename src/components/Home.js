@@ -7,7 +7,7 @@ class Home extends React.Component {
   
   render() {
     return (
-      <p>Home</p>
+      <h1 className="app__title">Home</h1>
     );
   }
 

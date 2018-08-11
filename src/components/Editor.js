@@ -2,14 +2,21 @@ import React from "react";
 import './Editor.css'
 
 class Editor extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.editorField = React.createRef();
+  }
+
   componentWillUnmount() {
-    this.props.saveMe();
+    const content = this.editorField.current.value;
+    this.props.saveMe(content);
   }
   render() {
     return (
       <React.Fragment>
-        <p>Editor</p>
-        <textarea className="form__field form__field--textarea" defaultValue={this.props.miTexto}></textarea>
+        <h1 className="app__title">Editor</h1>
+        <textarea className="form__field form__field--textarea" defaultValue={this.props.miTexto} ref={this.editorField}></textarea>
       </React.Fragment>
     );
   }
